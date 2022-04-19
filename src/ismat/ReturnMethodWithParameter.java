@@ -39,41 +39,86 @@ public class ReturnMethodWithParameter {
         String nameAndAge = name + age;
         return nameAndAge;
     }
-    public String getStudentinfo( String name){
-        System.out.println("student name is "  +name);
+
+    public String getStudentinfo(String name) {
+        System.out.println("student name is " + name);
         return name;
 
     }
-    public int getSummation(double num1,double num2){
-        double total=num1+num2;
-        System.out.println(   "summation number   "     + total);
-         return (int) total;
+
+    public int getSummation(double num1, double num2) {
+        double total = num1 + num2;
+        System.out.println("summation number   " + total);
+        return (int) total;
     }
-    public char getDressSize(char size){
-        System.out.println("dress size is "    +size);
+
+    public char getDressSize(char size) {
+        System.out.println("dress size is " + size);
         return size;
     }
-    public boolean isBergerAvailable( boolean berger){
-        System.out.println("berger is available"  +true);
-        return  true;
+
+    public boolean isBergerAvailable(boolean berger) {
+        System.out.println("berger is available" + true);
+        return true;
     }
 
 
-    public int getAddition(int num1,int num2){
-       int totalAddNumber=num1+num2;
+    public int getAddition(int num1, int num2) {
+        int totalAddNumber = num1 + num2;
         return totalAddNumber;
     }
 
 
-    public  double getSummation(int num1,int num2,double num3){
-        double total=num1+num2+num3;
-        System.out.println("total number is  " +total );
+    public double getSummation(int num1, int num2, double num3) {
+        double total = num1 + num2 + num3;
+        System.out.println("total number is  " + total);
         return total;
     }
-    public  double getSummation1(int num1,int num2) {
+
+    public double getSummation1(int num1, int num2) {
         double total = num1 + num2;
         return total;
     }
+
+    public boolean isPizzaAvailable(char pizzaSize, double pizzaPrice) {
+
+        char size = 'l';
+        double Price = pizzaPrice;
+        if (pizzaSize == 'L'){
+            System.out.println("yes  L size  pizza   is avaiable ");
+
+        }else
+
+    {
+        System.out.println("l size pizza is not available");
+    }
+    return  size=='l';
+
+
+
+}
+
+public boolean isBergerAvailable(char size, int price    ){
+   char bergerSize=size;
+   int bergerPrice= price;
+
+    if(bergerPrice==20){
+
+        System.out.println(" yes  berger price is 20 available");
+    }
+
+    else {
+
+        System.out.println(  "berger price is 20 not available");
+
+
+    }
+    return bergerPrice==20;
+}
+
+
+
+
 
 
     public static void main(String[] args) {
@@ -97,7 +142,8 @@ public class ReturnMethodWithParameter {
         double num5=400;
         double num6=num5+ ReturnMethodWithParameter.getSummation1(20,20) ;
         System.out.println( " num 6 number is "      +num6);
-
+        ReturnMethodWithParameter.isPizzaAvailable('s',20);
+        ReturnMethodWithParameter.isBergerAvailable('m',25);
     }
 
 
